@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Restaurant from './components/Restaurant';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Update from './components/Update'
+import Update from './components/Update';
+import axios from  'axios';
 import './App.css';
 
 import { FaSistrix } from 'react-icons/fa';
@@ -19,7 +20,24 @@ export default class App extends Component {
        restaurants : []
      }
      this.clickHandler = this.clickHandler.bind(this);
+    //  this.getComponents = this.getComponents.bind(this);
    }
+
+  //  componentDidMount(){
+  //    this.getComponents();
+  //  }
+
+  //  getComponents() {
+  //    axios
+  //    .get('api/restaurants')
+  //    .then((res) => {
+  //      let idx = Math.floor(Math.random() * 60)
+  //      this.setState({
+  //        restaurants:res.
+  //      })
+  //    })
+  //  }
+   
 
    clickHanlder(e){
      let name = e.target.getAttribute("class");
