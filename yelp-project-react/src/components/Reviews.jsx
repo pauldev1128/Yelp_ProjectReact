@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
-const Reviews = () => {
+const Reviews = ({review}) => {
     return(
-        <div>this is the reviews pg</div>
+        <div className='reviewContainer'>
+            <p className='review'>{review}</p>
+        </div>
     )
 }
 
