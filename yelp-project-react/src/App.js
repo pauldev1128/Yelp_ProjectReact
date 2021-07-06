@@ -9,15 +9,21 @@ export default class App extends Component {
    constructor(props) {
      super(props); 
      this.state = {
+       homepage: false,
        page : 'homepage',
        signup : false,
        login: false,
        restaurants : []
      }
+     this.clickHandler = this.clickHandler.bind(this);
    }
 
-   
-
+   clickHanlder(e){
+     let name = e.target.getAttribute("class");
+     this.setState({
+       page: name
+     })
+   }
 
 
    render() {
@@ -25,25 +31,25 @@ export default class App extends Component {
       case 'update':
       return (
         <div>
-          <Update/>
+          <Update clickHandler={this.clickHandler}/>
         </div>  
       )
       case 'login':
       return (
         <div>
-          <Login/>
+          <Login clickHandler={this.clickHandler}/>
         </div>  
       )
       case 'signup':
       return (
         <div>
-          <Signup/>
+          <Signup clickHandler={this.clickHandler}/>
         </div>  
       )
       default:
       return (
         <div>
-          <Restaurant/>
+          <Restaurant clickHandler={this.clickHandler}/>
         </div>
       )   
    }
