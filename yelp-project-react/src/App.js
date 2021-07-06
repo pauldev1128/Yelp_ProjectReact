@@ -5,6 +5,9 @@ import Signup from './components/Signup';
 import Update from './components/Update'
 import './App.css';
 
+import { FaSistrix } from 'react-icons/fa';
+import { MdMailOutline } from 'react-icons/md';
+
 export default class App extends Component {
    constructor(props) {
      super(props); 
@@ -31,25 +34,25 @@ export default class App extends Component {
       case 'update':
       return (
         <div>
-          <Update clickHandler={this.clickHandler}/>
+          <Update clickHandler={this.clickHandler} update={this.state.update}/>
         </div>  
       )
       case 'login':
       return (
         <div>
-          <Login clickHandler={this.clickHandler}/>
+          <Login clickHandler={this.clickHandler} login={this.state.login}/>
         </div>  
       )
       case 'signup':
       return (
         <div>
-          <Signup clickHandler={this.clickHandler}/>
+          <Signup clickHandler={this.clickHandler} signup={this.state.signup}/>
         </div>  
       )
       default:
       return (
         <div>
-          <Restaurant clickHandler={this.clickHandler}/>
+          <Restaurant clickHandler={this.clickHandler} restaurants={this.state.restaurants}/>
         </div>
       )   
    }
