@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 const Signup = () => {
     return(
-        <div>this is the signup pg</div>
+        <div>
+            <form>
+                <div></div>
+            </form>
+        </div>
     )
 }
 

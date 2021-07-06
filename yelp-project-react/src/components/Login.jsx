@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 
 const Login = () => {
     return(
-        <div>this is the login pg</div>
+        <div>
+            <form>
+
+            </form>
+        </div>
     )
 }
 

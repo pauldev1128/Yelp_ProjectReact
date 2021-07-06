@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
 import Reviews from './Reviews';
 
-const Restaurant = () => {
+const Restaurant = (props, {reviews}) => {
     return(
-        <div>this is the restaurant pg</div>
+        <div className="restaurantsDiv">
+            <div className="restaurantInfo">
+            <p className="restaurantName">{props.name}</p>
+            <p className="restaurantAddress">{props.address}</p>
+            <p className="restaurantDescription">{props.description}</p>
+            <p className="ratings">{props.ratings}</p>
+            <div className="reviews">
+                {reviews.map((review,i) => (
+                    <Reviews review={review} key={i}/>
+                ))}
+            </div>
+            </div>
+        </div>
     )
 }
 
